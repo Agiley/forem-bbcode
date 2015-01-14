@@ -8,9 +8,7 @@ module Forem
       end
 
       def self.blockquote(text)
-        text.split("\n").map do |line|
-          "> " + line
-        end.join("\n")
+        "[quote]#{text}[/quote]"
       end
 
       # This postpones the sanitization until *after* the rendered has rendered all the text.

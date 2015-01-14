@@ -4,7 +4,7 @@ module Forem
   module Formatters
     class Bbcode
       def self.format(text)
-        RubyBBCode.to_html(text)
+        RubyBBCode.to_html(text, escape_html = false)
       end
 
       def self.blockquote(text)
